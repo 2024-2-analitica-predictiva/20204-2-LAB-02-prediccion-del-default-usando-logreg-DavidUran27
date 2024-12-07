@@ -106,6 +106,8 @@
 # - Remueva la columna "ID".
 
 import pandas as pd
+import gzip
+
 
 
 #importo test
@@ -300,7 +302,7 @@ import os
 models_dir = '../files/models'
 os.makedirs(models_dir, exist_ok=True)
 
-with open("../files/models/model.pkl","wb") as file:
+with gzip.open("../files/models/model.pkl.gz","wb") as file:
     pickle.dump(model,file)
 
     
